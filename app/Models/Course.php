@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 class Course extends Model
 {
     use HasFactory;
+    protected $fillable = ['name','user_id', 'start_date', 'end_date', 'category_id'];
 
     public function user(): BelongsTo {
         return $this->belongsTo(User::class);

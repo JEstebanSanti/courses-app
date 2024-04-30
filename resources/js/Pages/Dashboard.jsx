@@ -1,8 +1,8 @@
 import PrimaryButton from '@/Components/PrimaryButton';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
-import { Head } from '@inertiajs/react';
+import { Head, Link } from '@inertiajs/react';
 
-export default function Dashboard({ auth }) {
+export default function Dashboard({auth}) {
     return (
         <AuthenticatedLayout
             user={auth.user}
@@ -15,7 +15,9 @@ export default function Dashboard({ auth }) {
                     <div className="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                         <div className=" flex justify-between p-6 text-gray-900 dark:text-gray-100">
                             Mis Cursos
-                            <PrimaryButton>Crear Curso</PrimaryButton>
+                            <Link href={route("courses.create")} >
+                                <PrimaryButton>Crear Curso</PrimaryButton>
+                            </Link>
                         </div>
 
                     </div>

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->date('start_date')->format('d-m-Y');
-            $table->date('end_date');
+            $table->date('end_date')->format('d-m-Y');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('category_id')->nullable();
             $table->timestamps();

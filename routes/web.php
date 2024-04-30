@@ -24,6 +24,10 @@ Route::middleware(['auth', 'verified'])->group( function() {
 
     Route::prefix('/Courses')->group(function(){
         Route::get('/', [CourseController::class, 'index'])->name('courses.list');
+        Route::get('/view/{id}', [CourseController::class, 'view'])->name('courses.view');
+        Route::post('/create', [CourseController::class, 'store'])->name('courses.store');
+        Route::get('/create', [CourseController::class, 'create'])->name('courses.create');
+
     });
 });
 
