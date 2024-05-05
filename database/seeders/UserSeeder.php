@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->insert([
             'name' => 'jorge',
-            'email' => Str::random(10).'@example.com',
+            'email' => 'jorge123@example.com',
             'password' => Hash::make('password123'),
         ]);
         DB::table('users')->insert([
@@ -29,6 +29,41 @@ class UserSeeder extends Seeder
         ]);
         DB::table('users')->insert([
             'name' => 'dan',
+            'email' => Str::random(10).'@example.com',
+            'password' => Hash::make('password123'),
+        ]);
+        DB::table('users')->insert([
+            'name' => 'diego',
+            'email' => Str::random(10).'@example.com',
+            'password' => Hash::make('password123'),
+        ]);
+        DB::table('users')->insert([
+            'name' => 'felix',
+            'email' => Str::random(10).'@example.com',
+            'password' => Hash::make('password123'),
+        ]);
+        DB::table('users')->insert([
+            'name' => 'diana',
+            'email' => Str::random(10).'@example.com',
+            'password' => Hash::make('password123'),
+        ]);
+        DB::table('users')->insert([
+            'name' => 'francisco',
+            'email' => Str::random(10).'@example.com',
+            'password' => Hash::make('password123'),
+        ]);
+        DB::table('users')->insert([
+            'name' => 'Alejandra',
+            'email' => Str::random(10).'@example.com',
+            'password' => Hash::make('password123'),
+        ]);
+        DB::table('users')->insert([
+            'name' => 'Cristian',
+            'email' => Str::random(10).'@example.com',
+            'password' => Hash::make('password123'),
+        ]);
+        DB::table('users')->insert([
+            'name' => 'Adriana',
             'email' => Str::random(10).'@example.com',
             'password' => Hash::make('password123'),
         ]);

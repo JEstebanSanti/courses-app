@@ -22,7 +22,7 @@ export default function Create({ auth, categorys }) {
             header={<h2 className="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">Create Course</h2>}
         >
             <div className="flex justify-center p-2">
-                <form onSubmit={onSubmit} action="post"  className="max-w-sm flex flex-col w-64 gap-y-2 p-2 mb-5">
+                <form onSubmit={onSubmit}  className="max-w-sm flex flex-col w-64 gap-y-2 p-2 mb-5">
                     <TextInput
                         id="course_name_id"
                         placeholder="Nombra tu Curso"
@@ -80,9 +80,6 @@ export default function Create({ auth, categorys }) {
                 </form>
 
             </div>
-            <pre>
-                {JSON.stringify(auth, undefined, 2)}
-            </pre>
 
         </Authenticated>
     )

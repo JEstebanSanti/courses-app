@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Course;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -18,15 +19,17 @@ Route::get('/', function () {
 
 
 Route::middleware(['auth', 'verified'])->group( function() {
-    Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard');
-    })->name('dashboard');
+
+    Route::prefix('dashboard')->group(function(){
+        Route::get('/', [CourseController::class, 'dashboard'])->name('dashboard');
+    });
 
     Route::prefix('/Courses')->group(function(){
         Route::get('/', [CourseController::class, 'index'])->name('courses.list');
         Route::get('/view/{id}', [CourseController::class, 'view'])->name('courses.view');
         Route::post('/create', [CourseController::class, 'store'])->name('courses.store');
         Route::get('/create', [CourseController::class, 'create'])->name('courses.create');
+        Route::post('/subscribe', [CourseController::class, 'subscribe'])->name('courses.subscribe');
 
     });
 });

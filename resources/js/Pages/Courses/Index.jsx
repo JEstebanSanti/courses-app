@@ -16,7 +16,7 @@ export default function Courses({ auth, courses }) {
                     <div className="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                         <div className="p-6 text-gray-900 dark:text-gray-100">Show all courses!</div>
                     </div>
-                    <div className='flex justify-evenly flex-wrap gap-3 py-2 bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mt-3'>
+                    <div className='flex justify-arround flex-wrap gap-3 px-2 py-2 bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mt-3'>
 
                         {
                             courses.data.map((course) => (

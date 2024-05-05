@@ -1,8 +1,10 @@
+import CourseItem from '@/Components/CourseItem';
 import PrimaryButton from '@/Components/PrimaryButton';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
+import Pagination from '@/Components/Pagination';
 import { Head, Link } from '@inertiajs/react';
 
-export default function Dashboard({auth}) {
+export default function Dashboard({auth, courses}) {
     return (
         <AuthenticatedLayout
             user={auth.user}
@@ -19,7 +21,13 @@ export default function Dashboard({auth}) {
                                 <PrimaryButton>Crear Curso</PrimaryButton>
                             </Link>
                         </div>
-
+                        {
+                            courses.data.map((course) => (<CourseItem course={course} key={course.name}/>))
+                        }
+                        <div className='flex justify-center p-2 rounded-xl'>
+                        <Pagination links={courses.meta.links} ></Pagination>
+                        </div>
+                        <pre>{JSON.stringify(courses, undefined, 2)}</pre>
                     </div>
                 </div>
             </div>
