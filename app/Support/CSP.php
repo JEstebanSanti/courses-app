@@ -21,5 +21,7 @@ class CSP extends Basic
         $this->addDirective(Directive::DEFAULT, '*.courses-app-production-ea6c.up.railway.app');
         
         $this->addDirective(Directive::DEFAULT, '*.fonts.bunny.net');
+        $this->addDirective(Directive::DEFAULT, 'http://www.w3.org');
+    
     }
 }
