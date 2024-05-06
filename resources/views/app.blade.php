@@ -16,6 +16,7 @@
         @vite(['resources/js/app.jsx', "resources/js/Pages/{$page['component']}.jsx"])
         @inertiaHead
         @routes(nonce: csp_nonce())
+        @routes(nonce: Vite::cspNonce())
     </head>
     <body class="font-sans antialiased">
         @inertia
