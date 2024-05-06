@@ -8,7 +8,7 @@ export default function CoursesView({ auth, course }) {
     })
     const onHandleSubmit = (e) => {
         e.preventDefault();
-        post(route("courses.subscribe"))
+        post(secure_url("courses.subscribe"))
     }
     return (
 

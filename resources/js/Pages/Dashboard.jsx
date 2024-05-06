@@ -17,7 +17,7 @@ export default function Dashboard({auth, courses}) {
                     <div className="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                         <div className=" flex justify-between p-6 text-gray-900 dark:text-gray-100">
                             Mis Cursos
-                            <Link href={route("courses.create")} >
+                            <Link href={secure_url("courses.create")} >
                                 <PrimaryButton>Crear Curso</PrimaryButton>
                             </Link>
                         </div>

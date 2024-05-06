@@ -18,7 +18,7 @@ Route::get('/', function () {
 
 
 
-Route::middleware(['auth', 'verified', 'https'])->group( function() {
+Route::middleware(['auth', 'verified'])->group( function() {
 
     Route::prefix('dashboard')->group(function(){
         Route::get('/', [CourseController::class, 'dashboard'])->name('dashboard');

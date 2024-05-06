@@ -18,10 +18,10 @@ export default function Authenticated({ user, header, children }) {
                             </div>
 
                             <div className="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                                <NavLink href={route('dashboard')} active={route().current('dashboard')}>
+                                <NavLink href={secure_url('dashboard')} active={secure_url().current('dashboard')}>
                                     Dashboard
                                 </NavLink>
-                                <NavLink href={route('courses.list')} active={route().current('courses.list')}>
+                                <NavLink href={secure_url('courses.list')} active={secure_url().current('courses.list')}>
                                     Courses
                                 </NavLink>
                             </div>
@@ -55,8 +55,8 @@ export default function Authenticated({ user, header, children }) {
                                     </Dropdown.Trigger>
 
                                     <Dropdown.Content>
-                                        <Dropdown.Link href={route('profile.edit')}>Profile</Dropdown.Link>
-                                        <Dropdown.Link href={route('logout')} method="post" as="button">
+                                        <Dropdown.Link href={secure_url('profile.edit')}>Profile</Dropdown.Link>
+                                        <Dropdown.Link href={secure_url('logout')} method="post" as="button">
                                             Log Out
                                         </Dropdown.Link>
                                     </Dropdown.Content>
@@ -92,7 +92,7 @@ export default function Authenticated({ user, header, children }) {
 
                 <div className={(showingNavigationDropdown ? 'block' : 'hidden') + ' sm:hidden'}>
                     <div className="pt-2 pb-3 space-y-1">
-                        <ResponsiveNavLink href={route('dashboard')} active={route().current('dashboard')}>
+                        <ResponsiveNavLink href={secure_url('dashboard')} active={secure_url().current('dashboard')}>
                             Dashboard
                         </ResponsiveNavLink>
                     </div>
@@ -104,8 +104,8 @@ export default function Authenticated({ user, header, children }) {
                         </div>
 
                         <div className="mt-3 space-y-1">
-                            <ResponsiveNavLink href={route('profile.edit')}>Profile</ResponsiveNavLink>
-                            <ResponsiveNavLink method="post" href={route('logout')} as="button">
+                            <ResponsiveNavLink href={secure_url('profile.edit')}>Profile</ResponsiveNavLink>
+                            <ResponsiveNavLink method="post" href={secure_url('logout')} as="button">
                                 Log Out
                             </ResponsiveNavLink>
                         </div>

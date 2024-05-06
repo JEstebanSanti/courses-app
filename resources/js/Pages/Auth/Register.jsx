@@ -23,7 +23,7 @@ export default function Register() {
     const submit = (e) => {
         e.preventDefault();
 
-        post(route('register'));
+        post(secure_url('register'));
     };
 
     return (
