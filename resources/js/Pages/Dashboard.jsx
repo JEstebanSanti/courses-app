@@ -27,7 +27,6 @@ export default function Dashboard({auth, courses}) {
                         <div className='flex justify-center p-2 rounded-xl'>
                         <Pagination links={courses.meta.links} ></Pagination>
                         </div>
-                        <pre>{JSON.stringify(courses, undefined, 2)}</pre>
                     </div>
                 </div>
             </div>
