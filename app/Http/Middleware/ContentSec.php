@@ -22,6 +22,9 @@ class SecurityHeadersMiddleware
         if (!app()->environment('local')) {
             $response->headers->set('Content-Security-Policy', "script-src 'self' 'nonce-{$nonce}'; object-src 'none'; style-src 'self' fonts.googleapis.com");
         }
+        if (!app()->environment('local')) {
+            $response->headers->set('Content-Security-Policy', "script-src 'self' 'nonce-{$nonce}'; object-src 'none'; style-src 'self' fonts.bunny.net");
+        }
 
         return $response;
     }

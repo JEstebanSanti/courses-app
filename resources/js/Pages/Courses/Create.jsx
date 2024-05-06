@@ -14,7 +14,7 @@ export default function Create({ auth, categorys }) {
     })
     const onSubmit = (e) => {
         e.preventDefault();
-        post(secure_url("courses.store"))
+        post(route("courses.store"))
     }
     return (
         <Authenticated
@@ -70,7 +70,7 @@ export default function Create({ auth, categorys }) {
                     </Select>
                     <div className="flex justify-between p-2">
                         <PrimaryButton type="submit" className="max-w-full text-center">Crear</PrimaryButton>
-                        <Link href={secure_url('dashboard')} >
+                        <Link href={route('dashboard')} >
                             <DangerButton >
                                 Cancel
                             </DangerButton>

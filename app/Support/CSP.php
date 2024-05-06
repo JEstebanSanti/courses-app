@@ -21,7 +21,7 @@ class CSP extends Basic
         $this->addDirective(Directive::DEFAULT, 'https://courses-app-production-ea6c.up.railway.app');
         $this->addDirective(Directive::CONNECT, 'https://courses-app-production-ea6c.up.railway.app');
         $this->addDirective(Directive::STYLE, 'https://courses-app-production-ea6c.up.railway.app');
-        $this->addDirective(Directive::BASE, 'https://courses-app-production-ea6c.up.railway.app');
+        $this->addDirective(Directive::BASE, '*.courses-app-production-ea6c.up.railway.app');
 
 
         

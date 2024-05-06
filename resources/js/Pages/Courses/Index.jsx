@@ -35,7 +35,7 @@ export default function Courses({ auth, courses }) {
                                     </div>
                                     <div className='mb-3'>
                                         <p className="mb-3 text-xs font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                                        <a href={secure_url('courses.view', course.id)}>
+                                        <a href={route('courses.view', course.id)}>
                                             <SecondaryButton>
                                                 Read more
                                                 <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
