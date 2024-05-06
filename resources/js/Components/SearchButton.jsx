@@ -7,7 +7,6 @@ export default function SearchButton({ type='', ...props  }) {
                 type={type}
                 {...props}
             >
-            <SearchLogo></SearchLogo>
 
             </button>
         </>

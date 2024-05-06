@@ -1,6 +1,3 @@
-import ApplicationLogo from '@/Components/ApplicationLogo';
-import SearchButton from '@/Components/SearchButton';
-import SearchLogo from '@/Components/SearchLogo';
 import { Link, Head } from '@inertiajs/react';
 
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
@@ -20,12 +17,10 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                     <div className="relative w-full max-w-2xl px-6 lg:max-w-7xl">
                         <header className="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
                             <div className="flex lg:justify-center lg:col-start">
-                               <ApplicationLogo className="block h-9 w-full" />
                             </div>
                             <div className='flex lg:justify-center lg:col-start-2'>
                                 <form action="" method='post' className='flex'>
                                     <input type="text" className=' text-nowrap  text-black'/>
-                                    <SearchButton className="flex items-center p-2" type="submit"/>
                                 </form> 
                             </div>
                             <nav className="-mx-3 flex flex-1 justify-end">
