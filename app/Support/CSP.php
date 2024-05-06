@@ -18,9 +18,15 @@ class CSP extends Basic
         ->addDirective(Directive::IMG, [
             'https://images.google.com',
         ]);
-        $this->addDirective(Directive::DEFAULT, '*.courses-app-production-ea6c.up.railway.app');
+        $this->addDirective(Directive::DEFAULT, 'https://courses-app-production-ea6c.up.railway.app');
+        $this->addDirective(Directive::CONNECT, 'https://courses-app-production-ea6c.up.railway.app');
+        $this->addDirective(Directive::STYLE, 'https://courses-app-production-ea6c.up.railway.app');
+        $this->addDirective(Directive::BASE, 'https://courses-app-production-ea6c.up.railway.app');
+
+
         
-        $this->addDirective(Directive::DEFAULT, '*.fonts.bunny.net');
-    
+        $this->addDirective(Directive::FONT, 'https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap');
+        $this->addDirective(Directive::CONNECT, 'https://fonts.bunny.net');
+        
     }
 }
