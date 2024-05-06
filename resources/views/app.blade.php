@@ -6,6 +6,7 @@
 
         <title inertia>{{ config('app.name', 'Laravel') }}</title>
         <meta property="csp-nonce" content="{{csp_nonce()}}">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <!-- Fonts -->
         <link nonce="{{csp_nonce()}}" rel="preconnect" href="https://fonts.bunny.net">
         <link nonce="{{csp_nonce()}}"  href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap"  rel="stylesheet" />
