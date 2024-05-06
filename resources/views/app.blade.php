@@ -15,7 +15,7 @@
         @viteReactRefresh
         @vite(['resources/js/app.jsx', "resources/js/Pages/{$page['component']}.jsx"])
         @inertiaHead
-        @routes(nonce: Vite::cspNonce())
+        @routes(nonce: csp_nonce())
     </head>
     <body class="font-sans antialiased">
         @inertia
